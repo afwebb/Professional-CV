@@ -1,0 +1,218 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}%custom \section
+\usepackage{bibentry}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{3pt}
+
+\usepackage[absolute]{textpos}
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+\renewcommand\labelitemi{-}
+\setlist[itemize]{wide=0pt, topsep=0pt, before=\leavevmode\vspace{-2.5mm}}
+
+%--------------------BEGIN DOCUMENT----------------------
+
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+
+\par{\centering
+		{\Huge Aaron Webb
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+
+\section{Personal Data}
+\begin{tabular}{rl}
+    \textsc{email:}     & \href{mailto:aaron.f.webb@gmail.com}{aaron.f.webb@gmail.com} \\
+    \textsc{Phone:}     & (480) 298-8082\\
+    \textsc{Address:}   & 4501 Rosedale Ave., Austin, TX 78756 \\
+    \textsc{Github:}    & \href{https://github.com/afwebb/}{https://github.com/afwebb/}
+\end{tabular}
+
+
+\section{Education}
+\begin{tabular}{rl}
+
+    Current & Ph.D. Candidate in Particle Physics, The University of Texas at Austin\\
+    & Thesis Topic: "Applying Deep Learning to Search for Physics Beyond the \\ 
+    & Standard Model in Higgs-Top Quark Interactions" | \small Advisor: Prof. Peter Onyisi \\\\
+    
+    2015 & B.S. in Physics, Duke University \\
+    & Graduated with Highest Distinction \\
+    & Thesis: ``Searches for Vector Boson Scattering at the LHC'' | \small Advisor: Prof. Alfred Goshaw\\
+
+\end{tabular}
+
+\section{Research Experience}
+\begin{longtable}{rp{11cm}}
+
+    & \textbf{Particle Physics Research} \\\\
+
+    \textsc{Aug 2015}   &   Analysis of Higgs Production in Association with Top Quark Pairs \\
+    \emph{Current}      &   \footnotesize{
+    \begin{itemize}[leftmargin=*, topsep=0pt]
+        \item Collaborated with ATLAS physicists to measure the Yukawa coupling between the Higgs Boson and the top quark, leading to a publication \cite{ttH_paper}. 
+        \item Developer for the software used to generate Monte Carlo simulations, data files, using primarily C++ 
+        \item Optimized b-jet identification, reducing contamination from misidentified light jets 
+        \item Developed  fake leptons from asymmetric photon conversions, leading to a seperate publication \cite{raretop},
+        \item Performed studies related to the WZ background of this channel. 
+        \item Thesis will expand on this analysis, using effective field theory to search for physics beyond the Standard Model.
+    \end{itemize}
+    }\\\\
+         
+    \textsc{Jan 2016}   &   ATLAS Data Quality Infrastructure \\
+    \emph{Current}      &   \footnotesize{
+    \begin{itemize}[leftmargin=*,topsep=0pt]
+        \item Responsible for maintaining and updating data quality code-base. 
+        \item Developed monitoring software to ensure the data quality server remains online, tracking server responsiveness and automating restarts. 
+        \item Automated the process of testing updates to data quality configurations, and assumed responsibility for testing and applying updates. 
+        \item Oversaw the transfer of data to an improved file system.
+    \end{itemize}
+    }\\\\
+         
+    \textsc{Mar 2016}   &   WZ + Heavy Flavor Jet Analysis \\
+    \emph{Current}      &   \footnotesize{ 
+    \begin{itemize}[leftmargin=*,topsep=0pt]
+        \item WZ produced in association with a heavy flavor jet is a rare physics process that is difficult to simulate. 
+        \item Applied psuedo-continuous b-tagging techniques and advanced statistical fitting. 
+        \item Presented preliminary results at 2017 ATLAS week conference.
+    \end{itemize}
+    }\\\\
+          
+    \textsc{Oct 2016} & Measurement of c-jet tagging efficiency \\
+    \textsc{Jun 2017} & \footnotesize{
+    \begin{itemize}[leftmargin=*,topsep=0pt,topsep=0pt]
+        \item Worked with several ATLAS physicists to measure the efficiency with which jets originating from charm quarks are misidentified as b-jets. 
+        \item A likelihood approach was used to analyze events with top-quark pairs and extract the charm fraction. 
+        \item Results will be published in an ATLAS public note within the next few months.
+    \end{itemize}
+    }\\\\ 
+    
+    \textsc{Feb 2014}   & Vector Boson Scattering Analysis \\
+    \textsc{May 2015}   & \footnotesize{
+    \begin{itemize}[leftmargin=*,topsep=0pt]
+        \item Applied machine learning techniques to distinguish signal events from background, after comparing the performing of several algorithms including boosted decision trees and neural networks.
+        \item Placed limits on matrix-level interference between signal and background processes. 
+        \item Generated Monto Carlo simulations to compare theoretical predictions to data. 
+        \item Completed a senior thesis on this topic, for which I received highest distinction.
+    \end{itemize}
+    }\\\\
+    
+    \textsc{Mar 2013}   &   $Z\gamma$ and $Z\gamma\gamma$ Analysis \\
+    \textsc{May 2014}   &   \footnotesize{
+    \begin{itemize}[leftmargin=*,topsep=0pt]
+        \item Involved in the analysis of Z boson production with one and two high energy photons at the LHC. 
+        \item Developed techniques to reconstruct the polarization of the Z using the angular distribution of the decay products in order to test for anomalous gauge couplings. 
+        \item Obtained a Dean’s Summer Research fellowship to pursue this project. 
+        \item Presented the results of this research at the 2013 SESAPS conference.
+    \end{itemize}
+    }\\ \\
+    
+     & \bf{Assistant Instructor}\vspace{2mm} \\
+      
+     \textsc{Aug 2018}  &   The University of Texas at Austin \\
+     \textsc{Current}  &   \footnotesize{ 
+     \begin{itemize}[leftmargin=*,topsep=0pt]
+        \item Primary instructor of a Physical Science course
+        \item Designed and taught the course independently 
+        \item 
+    \end{itemize}
+    }\vspace{2mm}\\
+    
+     & \bf{Teaching Assistant}\vspace{2mm} \\
+      
+     \textsc{Aug 2015}  &   The University of Texas at Austin \\
+     \textsc{Dec 2016}  &   \footnotesize{ 
+     \begin{itemize}[leftmargin=*,topsep=0pt]
+        \item Prepared and lead recitation sections for undergraduate mechanics and electricity and magnetism courses. Involved in writing homework and exams, as well as grading.
+        \item Courses: Introductory mechanics for physics majors, engineers 
+    \end{itemize}
+    }\vspace{2mm}\\
+    
+     \textsc{Nov 2014}  &   Duke University \\
+     \textsc{Aug 2015}  &   \footnotesize{
+     \begin{itemize}[leftmargin=*]
+        \item Tutored students in understanding key scientific concepts for introductory mechanics and electromagnetism courses. Designed and prepared labs for the class, as well as in class demonstrations. Graded homework and exams.
+        \item Courses: Introductory mechanics, Introductory Electromagnetism
+    \end{itemize}
+    }\multicolumn{2}{c}{} \\
+     
+\end{longtable}
+
+\section*{Publications}
+\nobibliography{publications}
+\bibliographystyle{unsrt}
+\vspace{-0.8in}
+\begin{enumerate}
+    \item \bibentry{ttH_80}
+    \item \bibentry{DQ}
+    \item \bibentry{cjets}
+    \item \bibentry{ttH_paper}
+    \item \bibentry{raretop}
+\end{enumerate}
+
+\section{Skills}
+\begin{tabular}{rl}
+    Expertise: & Machine Learning, Big Data, Data Visualization, \\ & Advanced mathematics and statistics, technical writing and presentation \\
+    Programming Languages:& \textsc{C++}, \textsc{Python}, R, Unix, Mathematica, ROOT, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+    Machine Learning:& PyTorch, ScikitLearn, Tensorflow, XGBoost, TMVA\\
+    Other: & Advanced mathematics and statistics, technical writing and presentation, \\ & some electronic hardware experience, some French and Spanish
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Awards and Recognition}
+\begin{tabular}{clll}
+    & Summer Fellowship Recipient & 2019 & The University of Texas at Austin 
+    \\
+    & Ph.D. Candidacy & 2017 & The University of Texas at Austin  \\
+    & ATLAS Authorship Status & 2016 & The ATLAS Collaboration \\
+    & Graduation with Highest Distinction & 2015 & Duke University \\
+    & NSF REU Participant & 2014 & TUNL  \\
+    & Dean’s Summer Research Fellow & 2013 & Duke Trinity College   \\
+    & National Merit Scholar & 2011 & National Merit Scholarship Co.  \\
+    & National AP Scholar & 2011 & The College Board  \\
+\end{tabular}
+
+\section{Graduate Course Work}
+\begin{tabular}{ll}
+    & Supervised Statistical Learning  \\
+    & Bayesian Statistical Methods \\
+    & Statistical Models for Big Data \\
+    & Elementary Particle Physics \\
+    & Quantum Field Theory II \\
+    & Quantum Field Theory I  \\
+    & Statistical Mechanics  \\
+    & Electromagnetic Theory \\
+    & Methods of Mathematical Physics \\
+    & Classical Mechanics \\
+    & Physics of Sensors \\
+    
+\end{tabular}
+
+
+\end{document}
